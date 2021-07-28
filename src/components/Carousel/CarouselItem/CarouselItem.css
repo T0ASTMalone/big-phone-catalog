@@ -1,0 +1,19 @@
+.carousel-item {
+  width: 200px;
+  height: 200px;
+  background-color: azure;
+  margin: 5px;
+}
+
+.phone-card {
+  width: 95%;
+  height: 70%;
+  background-color: bisque;
+  margin: auto;
+}
+
+.item-controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}

@@ -1,0 +1,19 @@
+.carousel {
+  width: 1000px;
+  height: 1000px;
+  margin: auto;
+  display: flex;
+}
+
+.carousel-item-container {
+  background-color: aquamarine;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.carousel-control {
+  height: 20px;
+  margin: auto;
+}
