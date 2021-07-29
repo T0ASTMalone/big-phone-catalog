@@ -1,7 +1,9 @@
 import React from "react";
+import useFormatCurrency from "../../utils/useFormatCurrency";
 import "./CartItem.css";
 
 const CartItem = ({ item, removeItem }) => {
+  const formatter = useFormatCurrency('en-US', 'USD')
   return (
     <tr className="cart-item">
       <td className="item-controls">
@@ -12,7 +14,7 @@ const CartItem = ({ item, removeItem }) => {
           Remove
         </button>
       </td>
-      <td className="item-info">{item.price}</td>
+      <td className="item-info">{formatter.format(item.price)}</td>
     </tr>
   );
 };

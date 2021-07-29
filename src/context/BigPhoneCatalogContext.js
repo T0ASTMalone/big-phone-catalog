@@ -11,7 +11,6 @@ const initialState = {
 export const ShopContext = React.createContext(initialState);
 
 const reducer = (state, action) => {
-  console.log(state, action)
   switch (action.type) {
     case "INCR":
       return { ...state, count: action.payload };

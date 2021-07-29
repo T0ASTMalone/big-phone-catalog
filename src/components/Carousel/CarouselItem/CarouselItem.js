@@ -1,8 +1,12 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../../../context/BigPhoneCatalogContext";
+import useFormatCurrency from "../../utils/useFormatCurrency";
 import "./CarouselItem.css";
 
 const CarouselItem = ({ item, handleAddItem }) => {
+  
+  const formatter = useFormatCurrency('en-US', 'USD')
+
   return (
     <div className="carousel-item">
       <div className="phone-card">
@@ -10,7 +14,7 @@ const CarouselItem = ({ item, handleAddItem }) => {
       </div>
       <div className="carousel-item-controls">
         <button onClick={() => handleAddItem(item)} className="add-to-cart-btn">Add</button>
-        <span>{item.price}</span>
+        <span>{formatter.format(item.price)}</span>
       </div>
     </div>
   );
