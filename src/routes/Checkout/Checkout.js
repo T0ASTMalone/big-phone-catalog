@@ -1,19 +1,29 @@
-import React from 'react'
-import Cart from '../../components/Cart/Cart'
+import React, { useContext } from "react";
+import { useHistory } from "react-router-dom";
+import Cart from "../../components/Cart/Cart";
+import { ShopContext } from "../../context/BigPhoneCatalogContext";
 
 const Checkout = () => {
-    // useState to get cart
+  const { state, dispatch } = useContext(ShopContext)
+  const history = useHistory();
 
-    return (
-        <div>
-          <Cart />
-          <div className="payment-container">
-            <button className="payment-btn btn">
-              Pay
-            </button>
-          </div>
-        </div>
-    )
-}
+  const handleRemoveFromCart = (name) => {
+    dispatch({type: "REMOVE_FROM_CART", payload: name})
+  }
 
-export default Checkout
+  const handleCheckout = () => {
+    dispatch({type: "CHECKOUT"})
+    history.push('/');
+  }
+
+  return (
+    <div>
+      <Cart cart={state.cart} removeFromCart={handleRemoveFromCart} />
+      <div className="payment-container">
+        <button onClick={() => handleCheckout()} className="payment-btn btn">Pay</button>
+      </div>
+    </div>
+  );
+};
+
+export default Checkout;

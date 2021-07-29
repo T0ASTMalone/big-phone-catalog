@@ -1,21 +1,18 @@
-import React from 'react'
+import React from "react";
+import "./CartItem.css";
 
-const CartItem = () => {
+const CartItem = ({ item, removeItem }) => {
   return (
-    <tr>
+    <tr className="cart-item">
       <td className="item-controls">
-        <span className="phone-picture">
-          Phone 1
-        </span>
-        <button className="remove-btn btn">
+        <span className="phone-picture">{item.brand}</span>
+        <button onClick={() => removeItem(item.brand)} className="remove-btn btn">
           Remove
         </button>
       </td>
-      <td className="item-info">
-        $199
-      </td>
+      <td className="item-info">{item.price}</td>
     </tr>
-  )
-}
+  );
+};
 
-export default CartItem
+export default CartItem;

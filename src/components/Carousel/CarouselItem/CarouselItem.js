@@ -1,18 +1,19 @@
-import React from 'react'
-import './CarouselItem.css'
+import React, { useContext } from "react";
+import { ShopContext } from "../../../context/BigPhoneCatalogContext";
+import "./CarouselItem.css";
 
-const CarouselItem = ({item}) => {
-    return (
-        <div className="carousel-item">
-            <div className="phone-card">
-              <p>{item.brand}</p>
-            </div>
-            <div className="item-controls">
-                <button className='add-to-cart-btn'>Add</button>
-                <span>{item.price}</span>
-            </div>
-        </div>
-    )
-}
+const CarouselItem = ({ item, handleAddItem }) => {
+  return (
+    <div className="carousel-item">
+      <div className="phone-card">
+        <p>{item.brand}</p>
+      </div>
+      <div className="item-controls">
+        <button onClick={() => handleAddItem(item)} className="add-to-cart-btn">Add</button>
+        <span>{item.price}</span>
+      </div>
+    </div>
+  );
+};
 
-export default CarouselItem
+export default CarouselItem;

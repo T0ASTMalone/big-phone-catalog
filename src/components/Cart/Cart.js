@@ -1,9 +1,10 @@
 import React from 'react'
 import CartItem from './CartItem/CartItem'
+import './Cart.css'
 
-const Cart = () => {
+const Cart = ({cart, removeFromCart}) => {
   return (
-    <table>
+    <table className="cart">
       <thead>
         <tr>
           <th>Item</th>
@@ -11,11 +12,7 @@ const Cart = () => {
         </tr>
       </thead>
       <tbody>
-        <CartItem/>
-        <CartItem/>
-        <CartItem/>
-        <CartItem/>
-        <CartItem/>
+        {cart.length > 0 && cart.map(c => <CartItem item={c} removeItem={removeFromCart} />)}
       </tbody>
     </table>
   )

@@ -1,24 +1,32 @@
-import React, { useEffect, useState } from 'react'
-import Carousel from '../../components/Carousel/Carousel'
-import PhoneService from '../../services/catalog-service'
+import React, { useEffect, useState } from "react";
+import Carousel from "../../components/Carousel/Carousel";
+import PhoneService from "../../services/catalog-service";
 
 const Catalog = () => {
-    // loads items : pagination ? fetch next 
-    // passed as props to Carousel
-    // optimize loading her
+  const [catalog, setCatalog] = useState(null);
+  const [page, setPage] = useState(0);
 
-    const [catalog, setCatalog] = useState(null)
+  const updatePage = (newPage) => {
+    let response = PhoneService.findAllPaginate(newPage, 12);
+    setCatalog(response);
+    setPage(newPage);
+  };
 
-    useEffect(() => {
-      let response = PhoneService.findAllPaginate(0, 12);
-      setCatalog(response);
-    }, [])
+  useEffect(() => {
+    updatePage(0);
+  }, []);
 
-    return (
-        <div>
-            {catalog !== null && <Carousel catalog={catalog}/>}
-        </div>
-    )
-}
+  const handleUpdatePage = (newPage) => {
+    newPage !== page && updatePage(newPage, setCatalog);
+  };
 
-export default Catalog
+  return (
+    <div>
+      {catalog !== null && (
+        <Carousel catalog={catalog} page={page} handleUpdatePage={handleUpdatePage} />
+      )}
+    </div>
+  );
+};
+
+export default Catalog;

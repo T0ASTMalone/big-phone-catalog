@@ -1,18 +1,27 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import CarouselItem from "./CarouselItem/CarouselItem";
 import "./Carousel.css";
+import { ShopContext } from "../../context/BigPhoneCatalogContext";
 
-const Carousel = ({ catalog }) => {
+const Carousel = ({ catalog, handleUpdatePage, page }) => {
+  const { dispatch } = useContext(ShopContext);
+
+  const handleAddToCart = (item) => {
+    dispatch({ type: "ADD_TO_CART", payload: item });
+  };
+
   return (
     <div className="carousel">
-      {/* Carousel Controls */}
-      <button id="backward" className="carousel-control">
+      <button onClick={() => handleUpdatePage(--page)} id="backward" className="carousel-control">
         Back
       </button>
       <div className="carousel-item-container">
-        {catalog !== null && catalog.results.map((r, i) => <CarouselItem key={i} item={r} />)}
+        {catalog !== null &&
+          catalog.results.map((r, i) => (
+            <CarouselItem key={i} item={r} handleAddItem={handleAddToCart} />
+          ))}
       </div>
-      <button id="forward" className="carousel-control">
+      <button onClick={() => handleUpdatePage(++page)} id="forward" className="carousel-control">
         Forward
       </button>
     </div>
