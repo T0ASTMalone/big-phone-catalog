@@ -5,6 +5,7 @@ import { MdShoppingCart } from "react-icons/md";
 import "./Header.css";
 
 const Header = () => {
+  // TODO: add styles to slightly shrink header on scroll
   const {state} = useContext(ShopContext)
   return (
     <header>

@@ -13,6 +13,7 @@ const Carousel = ({ catalog, handleUpdatePage, page }) => {
     dispatch({ type: "ADD_TO_CART", payload: item });
   };
 
+  // TODO: add fantom Carousel Item to load new page
   return (
     <div className="carousel">
       <button onClick={() => handleUpdatePage(page - 1)} id="backward" className="carousel-control">
