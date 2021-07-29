@@ -8,7 +8,7 @@ const CarouselItem = ({ item, handleAddItem }) => {
       <div className="phone-card">
         <p>{item.brand}</p>
       </div>
-      <div className="item-controls">
+      <div className="carousel-item-controls">
         <button onClick={() => handleAddItem(item)} className="add-to-cart-btn">Add</button>
         <span>{item.price}</span>
       </div>

@@ -12,7 +12,7 @@ const Carousel = ({ catalog, handleUpdatePage, page }) => {
 
   return (
     <div className="carousel">
-      <button onClick={() => handleUpdatePage(--page)} id="backward" className="carousel-control">
+      <button onClick={() => handleUpdatePage(page - 1)} id="backward" className="carousel-control">
         Back
       </button>
       <div className="carousel-item-container">
@@ -21,7 +21,7 @@ const Carousel = ({ catalog, handleUpdatePage, page }) => {
             <CarouselItem key={i} item={r} handleAddItem={handleAddToCart} />
           ))}
       </div>
-      <button onClick={() => handleUpdatePage(++page)} id="forward" className="carousel-control">
+      <button onClick={() => handleUpdatePage(page + 1)} id="forward" className="carousel-control">
         Forward
       </button>
     </div>

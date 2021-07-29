@@ -2,4 +2,10 @@
   margin: auto;
   background-color: burlywood;
   min-width: 500px;
+  max-height: 200px;
+  overflow: scroll;
+}
+
+.cart-table-body {
+  max-height: 200px;
 }

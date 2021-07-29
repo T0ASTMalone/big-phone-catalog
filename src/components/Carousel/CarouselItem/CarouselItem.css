@@ -12,8 +12,8 @@
   margin: auto;
 }
 
-.item-controls {
-  display: flex;
+.carousel-item-controls {
+  padding: 10px;
   justify-content: space-between;
-  padding: 5px;
+  display: flex;
 }

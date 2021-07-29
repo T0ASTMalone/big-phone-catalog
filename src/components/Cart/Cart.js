@@ -1,8 +1,9 @@
-import React from 'react'
-import CartItem from './CartItem/CartItem'
-import './Cart.css'
+import React from "react";
+import CartItem from "./CartItem/CartItem";
+import "./Cart.css";
+import EmptyCart from "./EmptyCart/EmptyCart";
 
-const Cart = ({cart, removeFromCart}) => {
+const Cart = ({ cart, removeFromCart }) => {
   return (
     <table className="cart">
       <thead>
@@ -11,11 +12,15 @@ const Cart = ({cart, removeFromCart}) => {
           <th>Cost</th>
         </tr>
       </thead>
-      <tbody>
-        {cart.length > 0 && cart.map(c => <CartItem item={c} removeItem={removeFromCart} />)}
+      <tbody className="cart-table-body">
+        {cart.length > 0 ? (
+          cart.map((c) => <CartItem item={c} removeItem={removeFromCart} />)
+        ) : (
+          <EmptyCart />
+        )}
       </tbody>
     </table>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;

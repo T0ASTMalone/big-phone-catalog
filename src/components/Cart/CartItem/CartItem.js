@@ -5,7 +5,9 @@ const CartItem = ({ item, removeItem }) => {
   return (
     <tr className="cart-item">
       <td className="item-controls">
-        <span className="phone-picture">{item.brand}</span>
+        <div className="cart-item-img">
+          <span className="phone-picture">{item.brand}</span>
+        </div>
         <button onClick={() => removeItem(item.brand)} className="remove-btn btn">
           Remove
         </button>

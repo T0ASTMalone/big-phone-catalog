@@ -1,8 +1,7 @@
 .carousel {
-  width: 1000px;
-  height: 1000px;
   margin: auto;
   display: flex;
+  max-width: 1200px;
 }
 
 .carousel-item-container {
