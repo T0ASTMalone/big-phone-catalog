@@ -4,7 +4,6 @@ import useFormatCurrency from "../../utils/useFormatCurrency";
 import "./CarouselItem.css";
 
 const CarouselItem = ({ item, handleAddItem }) => {
-  
   const formatter = useFormatCurrency('en-US', 'USD')
 
   return (

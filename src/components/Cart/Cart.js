@@ -4,6 +4,8 @@ import "./Cart.css";
 import EmptyCart from "./EmptyCart/EmptyCart";
 
 const Cart = ({ cart, removeFromCart }) => {
+  // TODO: add total to cart
+  
   return (
     <table className="cart">
       <thead>
