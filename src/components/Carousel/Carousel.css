@@ -2,10 +2,15 @@
   margin: auto;
   display: flex;
   max-width: 1200px;
+  text-align: center;
+  -webkit-transition: opacity 3s ease-in-out;
+  -moz-transition: opacity 3s ease-in-out;
+  -ms-transition: opacity 3s ease-in-out;
+  -o-transition: opacity 3s ease-in-out;
+   opacity: 1;
 }
 
 .carousel-item-container {
-  background-color: aquamarine;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -13,6 +18,14 @@
 }
 
 .carousel-control {
-  height: 20px;
+  /* height: 20px; */
   margin: auto;
 }
+
+.fade-out {
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+} 

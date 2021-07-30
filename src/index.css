@@ -11,3 +11,50 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Colors */
+/* #1CC6FF */
+/* #97FBD1 */
+/* #F6A4EC */
+
+
+.btn {
+  --hoverTransition: 150ms cubic-bezier(0.215,0.61,0.355,1);
+  --buttonHeight: 32px;
+  border:none;
+  display: inline-flex;
+  align-items: center;
+  height: var(--buttonHeight);
+  padding: 0 calc(var(--buttonHeight) / 2);
+  border-radius: calc(var(--buttonHeight)/2);
+  background-color: #1cc6ff4f;
+  /* background-color: rgba(255, 255, 255, 0.678); */
+  transition: var(--hoverTransition);
+  /* color: #fff; */
+}
+
+.btn:hover {
+  transition: var(--hoverTransition);
+  background-color: #1cc6ff9d;
+}
+
+
+/* You can use pseudo element with skew transformation : */
+
+body {
+  height: 100vh;
+  margin: 0;
+  /* background: yellow; */
+}
+/* 
+body:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.308);
+  transform: skew(50deg);
+  transform-origin:top;
+} */

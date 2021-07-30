@@ -3,4 +3,24 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  background-color: rgba(0, 255, 255, 0.363);
+}
+
+.header-brand {
+  font-size: 18px;
+}
+
+.fade.hide-opacity{
+  opacity: 0;
+}
+
+.fade {
+  color: #FFFFFF;
+  text-align: center;
+
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+   opacity: 1;
 }
