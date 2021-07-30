@@ -2,10 +2,10 @@ import React from "react";
 import CartItem from "./CartItem/CartItem";
 import "./Cart.css";
 import EmptyCart from "./EmptyCart/EmptyCart";
+import useFormatCurrency from "../utils/useFormatCurrency";
 
 const Cart = ({ cart, removeFromCart }) => {
-  // TODO: add total to cart
-  
+  const formatter = useFormatCurrency("en-US", "USD");
   return (
     <table className="cart">
       <thead>
@@ -21,6 +21,11 @@ const Cart = ({ cart, removeFromCart }) => {
           <EmptyCart />
         )}
       </tbody>
+      <p>
+        {cart.length > 0
+          ? formatter.format(cart.reduce((total, current) => total + current.price, 0))
+          : formatter.format(0)}
+      </p>
     </table>
   );
 };

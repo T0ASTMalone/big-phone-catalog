@@ -13,8 +13,6 @@ const Carousel = ({ catalog, handleUpdatePage, page, last, next }) => {
   const [update, setUpdate] = useState(false)
 
   const handleAddToCart = (item) => {
-    // TODO: prevent same item from adding to cart if already exists or simply
-    // update quantity in cart
     dispatch({ type: "ADD_TO_CART", payload: item });
   };
 
@@ -26,7 +24,6 @@ const Carousel = ({ catalog, handleUpdatePage, page, last, next }) => {
     }, 2000)
   }, [page])
 
-  // TODO: add fantom Carousel Item to load new page
   return (
     <div className="carousel">
       <button

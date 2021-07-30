@@ -1,7 +1,7 @@
 .carousel {
   margin: auto;
   display: flex;
-  max-width: 1200px;
+  max-width: 1400px;
   text-align: center;
   -webkit-transition: opacity 3s ease-in-out;
   -moz-transition: opacity 3s ease-in-out;
@@ -13,7 +13,7 @@
 .carousel-item-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 10px;
 }
 
