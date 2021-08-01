@@ -1,9 +1,11 @@
 .cart-item{
-  height: 200px;
-  background-color: aqua;
-  box-shadow: 0 13px 27px -5px rgba(50,50,93,0.25),0 8px 16px -8px rgba(0,0,0,0.3);
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px -10px rgba(50,50,93,0.25),0 18px 36px -18px rgba(0,0,0,0.3);
 }
-
 
 .item-controls{
   display: flex;
@@ -15,13 +17,24 @@
   width: 200px;
   height: 200px;
   align-items: center;
-  background-color: aqua;
+  margin-bottom: 10px;
+  background-color: rgba(0, 255, 98, 0.411);
 }
 
 .remove-btn{
-  width: 100px;
+  display: block;
 }
 
 .item-info{
-  width: 200px
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  vertical-align: center;
+}
+
+.show-more {
+  margin-top: 10px;
+  background-color: white;
+  border: 1px solid black;
 }

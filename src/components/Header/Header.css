@@ -4,13 +4,38 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  /* background-color: rgba(0, 255, 255, 0.363); */
+  /* background-color: #F2F2F2; */
+
 }
 
+.header-brand {
+  width: 200px;
+}
+
+
+
 .header-link {
+  --header-link-width: 32px;
   font-size: 18px;
   font-weight: 800;
+  width: var(--header-link-width);
+  text-align: center;
   text-decoration: none;
+  color: black
+}
+
+.checkout-btn {
+  color: white;
+}
+
+.cart-icon {
+  margin: auto;
+}
+
+.cart-size {
+  text-align: center;
+  width: var(--header-link-width);
+  position: absolute;
 }
 
 .fade.hide-opacity{
@@ -20,10 +45,25 @@ header {
 .fade {
   color: #FFFFFF;
   text-align: center;
-
   -webkit-transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
   -ms-transition: opacity 1s ease-in-out;
   -o-transition: opacity 1s ease-in-out;
    opacity: 1;
+}
+
+.header-link-icon-enter {
+  opacity: 0;
+}
+
+.header-link-icon-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+.header-link-icon-exit {
+  opacity: 1;
+}
+.header-link-icon-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
 }

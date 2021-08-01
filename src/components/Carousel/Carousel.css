@@ -1,31 +1,15 @@
 .carousel {
   margin: auto;
   display: flex;
-  max-width: 1400px;
   text-align: center;
-  -webkit-transition: opacity 3s ease-in-out;
-  -moz-transition: opacity 3s ease-in-out;
-  -ms-transition: opacity 3s ease-in-out;
-  -o-transition: opacity 3s ease-in-out;
-   opacity: 1;
 }
 
 .carousel-item-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
 }
 
 .carousel-control {
-  /* height: 20px; */
-  margin: auto;
+  margin: auto 5px;
+  width: 50px;
 }
-
-.fade-out {
-  opacity: 0;
-  -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -ms-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-} 

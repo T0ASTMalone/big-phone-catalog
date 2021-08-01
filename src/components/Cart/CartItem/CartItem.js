@@ -2,20 +2,22 @@ import React from "react";
 import useFormatCurrency from "../../utils/useFormatCurrency";
 import "./CartItem.css";
 
-const CartItem = ({ item, removeItem }) => {
-  const formatter = useFormatCurrency('en-US', 'USD')
+const CartItem = ({ item, removeItem, style}) => {
+  const formatter = useFormatCurrency("en-US", "USD");
   return (
-    <tr className="cart-item">
-      <td className="item-controls">
+    <li style={style}  className="cart-item">
+      <div className="item-controls">
         <div className="cart-item-img">
-          <span className="phone-picture">{item.brand}</span>
+          <p className="phone-card-text">{item.brand}</p>
         </div>
         <button onClick={() => removeItem(item.brand)} className="remove-btn btn">
           Remove
         </button>
-      </td>
-      <td className="item-info">{formatter.format(item.price)}</td>
-    </tr>
+      </div>
+      <div className="item-info">
+        <h3>{formatter.format(item.price)}</h3>
+      </div>
+    </li>
   );
 };
 

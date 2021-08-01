@@ -5,6 +5,7 @@ import { ShopContext } from "../../context/BigPhoneCatalogContext";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 const Carousel = ({ catalog, handleUpdatePage, page, last, next }) => {
+
   const {
     state: { cart },
     dispatch,
@@ -17,12 +18,15 @@ const Carousel = ({ catalog, handleUpdatePage, page, last, next }) => {
   };
 
   useEffect(() => {
+
     const t = update;
     setUpdate(!t);
+
     setTimeout(() => {
       setUpdate(!!t);
     }, 2000)
-  }, [page])
+
+  }, [page]);
 
   return (
     <div className="carousel">

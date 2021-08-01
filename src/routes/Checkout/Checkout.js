@@ -1,27 +1,82 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import Cart from "../../components/Cart/Cart";
 import { ShopContext } from "../../context/BigPhoneCatalogContext";
 
+const PAGE_SIZE = 3;
+
 const Checkout = () => {
-  const { state, dispatch } = useContext(ShopContext)
+  
+  const {
+    state: { cart },
+    dispatch,
+  } = useContext(ShopContext);
+
   const history = useHistory();
+  const [page, setPage] = useState(0);
+  const [cartPage, setCartPage] = useState([]);
+  const [loaded, setLoaded] = useState(false);
 
   const handleRemoveFromCart = (name) => {
-    dispatch({type: "REMOVE_FROM_CART", payload: name})
-  }
+    dispatch({ type: "REMOVE_FROM_CART", payload: name });
+  };
 
   const handleCheckout = () => {
-    dispatch({type: "CHECKOUT"})
-    history.push('/');
-  }
+    dispatch({ type: "CHECKOUT" });
+    history.push("/");
+  };
+
+  useEffect(() => {
+    const lastIndex = (page === 0 ? 1 : page) * PAGE_SIZE
+
+    const newCart = cart.slice(0, lastIndex)
+
+    if(lastIndex >= cart.length){
+      setLoaded(true);
+    }
+
+    setCartPage(newCart);
+  }, [cart]);
+
+  useEffect(() => {
+    setCartPage(cart.slice(0, 3));
+  }, []);
+
+  const handleNextSection = (newPage) => {
+    let from = newPage * PAGE_SIZE;
+    let to = from + PAGE_SIZE;
+    let nextPage = cart.slice(0, to);
+
+    setPage(newPage);
+    setCartPage([...nextPage]);
+
+
+    if (to >= cart.length) {
+      setLoaded(true);
+    }
+  };
+
+  const getTotal = () => {
+    return cart.reduce((total, current) => total + current.price, 0);
+  };
 
   return (
     <div>
-      <Cart cart={state.cart} removeFromCart={handleRemoveFromCart} />
-      <div className="payment-container">
-        <button onClick={() => handleCheckout()} className="payment-btn btn">Pay</button>
-      </div>
+      <Cart
+        cart={cartPage}
+        handleNextSection={handleNextSection}
+        loaded={loaded}
+        page={page}
+        removeFromCart={handleRemoveFromCart}
+        total={getTotal()}
+      />
+      {cart.length > 0 && (
+        <div className="payment-container">
+          <button onClick={() => handleCheckout()} className="payment-btn btn">
+            Pay
+          </button>
+        </div>
+      )}
     </div>
   );
 };

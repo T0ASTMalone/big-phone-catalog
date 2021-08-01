@@ -1,11 +1,20 @@
 .cart {
   margin: auto;
-  background-color: burlywood;
-  min-width: 500px;
-  max-height: 200px;
-  overflow: scroll;
 }
 
-.cart-table-body {
-  max-height: 200px;
+.cart-header {
+  display: flex;
+  margin: auto;
+  max-width: 500px;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.cart-items {
+  max-height: 70vh;
+  overflow: scroll;
+  list-style: none;
+  padding: 0;
+  max-width: 500px;
+  margin: 0 auto ;
 }
