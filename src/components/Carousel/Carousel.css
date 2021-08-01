@@ -1,6 +1,8 @@
 .carousel {
   margin: auto;
   display: flex;
+  max-width: 1200px;
+  width: 100%;
   text-align: center;
 }
 
@@ -12,4 +14,16 @@
 .carousel-control {
   margin: auto 5px;
   width: 50px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .carousel-item-container {
+    width: 800px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .carousel-item-container {
+    width: 600px;
+  }
 }

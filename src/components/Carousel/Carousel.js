@@ -4,7 +4,7 @@ import "./Carousel.css";
 import { ShopContext } from "../../context/BigPhoneCatalogContext";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
-const Carousel = ({ catalog, handleUpdatePage, page, last, next }) => {
+const Carousel = ({ catalog, handleUpdatePage, page}) => {
 
   const {
     state: { cart },
