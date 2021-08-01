@@ -1,17 +1,15 @@
-import React, { forwardRef, useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../../context/BigPhoneCatalogContext";
-import { MdShoppingCart } from "react-icons/md";
 import "./Header.css";
 import { CSSTransition } from "react-transition-group";
+import {FaShoppingCart} from 'react-icons/fa'
 
 const Header = () => {
   const [alternate, setAlternate] = useState(false);
 
-  const refNode = useRef(null);
-
   useEffect(() => {
-    let alt = alternate;
+    let alt = false;
     const interval = setInterval(() => {
       alt = !alt;
       setAlternate(alt);
@@ -49,7 +47,7 @@ const Header = () => {
         <CSSTransition in={!alternate} timeout={2000} classNames="header-link-icon">
           {(state) => {
             return (
-              <MdShoppingCart
+              <FaShoppingCart
                 className="cart-icon"
                 style={{
                   ...defaultStyle,
