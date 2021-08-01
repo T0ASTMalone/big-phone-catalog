@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import CarouselItem from "./CarouselItem/CarouselItem";
 import "./Carousel.css";
 import { ShopContext } from "../../context/BigPhoneCatalogContext";
@@ -11,22 +11,9 @@ const Carousel = ({ catalog, handleUpdatePage, page}) => {
     dispatch,
   } = useContext(ShopContext);
 
-  const [update, setUpdate] = useState(false)
-
   const handleAddToCart = (item) => {
     dispatch({ type: "ADD_TO_CART", payload: item });
   };
-
-  useEffect(() => {
-
-    const t = update;
-    setUpdate(!t);
-
-    setTimeout(() => {
-      setUpdate(!!t);
-    }, 2000)
-
-  }, [page]);
 
   return (
     <div className="carousel">

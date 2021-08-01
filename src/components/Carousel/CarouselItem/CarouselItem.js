@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import { ShopContext } from "../../../context/BigPhoneCatalogContext";
+import React from "react";
 import useFormatCurrency from "../../utils/useFormatCurrency";
 import "./CarouselItem.css";
 

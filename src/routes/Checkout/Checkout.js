@@ -27,19 +27,16 @@ const Checkout = () => {
   };
 
   useEffect(() => {
-    const lastIndex = (page === 0 ? 1 : page) * PAGE_SIZE
-
+    const lastIndex = (page <= 0 ? 1 : page) * PAGE_SIZE;
     const newCart = cart.slice(0, lastIndex)
 
-    if(lastIndex >= cart.length){
-      setLoaded(true);
-    }
-
+    setLoaded(lastIndex >= cart.length);
     setCartPage(newCart);
   }, [cart]);
 
   useEffect(() => {
     setCartPage(cart.slice(0, 3));
+    setLoaded(false);
   }, []);
 
   const handleNextSection = (newPage) => {

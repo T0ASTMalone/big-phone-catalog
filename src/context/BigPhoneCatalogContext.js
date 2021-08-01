@@ -19,7 +19,7 @@ const reducer = (state, action) => {
     case "REMOVE_FROM_CART":
       return {...state, cart : [...state.cart.filter(c => c.brand !== action.payload)]}
     case "CHECKOUT":
-      return {...state, cart: [...new Array()]}
+      return {...state, cart: []}
     default:
       return state;
   }
