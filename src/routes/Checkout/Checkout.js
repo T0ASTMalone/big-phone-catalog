@@ -68,7 +68,7 @@ const Checkout = () => {
         total={getTotal()}
       />
       {cart.length > 0 && (
-        <div className="payment-container">
+        <div className="payment-containerr">
           <button onClick={() => handleCheckout()} className="payment-btn btn">
             Pay
           </button>

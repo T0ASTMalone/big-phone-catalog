@@ -21,7 +21,7 @@ header {
   width: var(--header-link-width);
   text-align: center;
   text-decoration: none;
-  color: black
+  color: white;
 }
 
 .checkout-btn {

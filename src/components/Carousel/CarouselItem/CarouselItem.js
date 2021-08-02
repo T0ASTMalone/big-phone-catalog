@@ -12,7 +12,7 @@ const CarouselItem = ({ item, handleAddItem, inCart }) => {
       </div>
       <div className="carousel-item-controls-container">
         <button onClick={() => !inCart && handleAddItem(item)} className="add-to-cart-btn btn clickable carousel-item-controls">Add</button>
-        <span className="carousel-item-controls">{formatter.format(item.price)}</span>
+        <span className="carousel-item-controls item-info">{formatter.format(item.price)}</span>
       </div>
     </div>
   );

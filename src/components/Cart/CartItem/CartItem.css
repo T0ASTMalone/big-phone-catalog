@@ -2,6 +2,7 @@
   margin: 20px;
   display: flex;
   justify-content: space-between;
+  background-color:  #F6F9FC ;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 10px 10px -10px rgba(50,50,93,0.25),0 18px 36px -18px rgba(0,0,0,0.3);
@@ -18,7 +19,12 @@
   height: 100px;
   align-items: center;
   margin-bottom: 10px;
-  background-color: rgba(0, 255, 98, 0.411);
+  background-color: rgba(5, 37, 61, 0.466) ;
+
+}
+
+.cart-item-img >.phone-card-text{
+  color: white;
 }
 
 .remove-btn{
@@ -29,12 +35,14 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  color: black;
   align-items: center;
   vertical-align: center;
 }
 
 .show-more {
   margin-top: 10px;
-  background-color: white;
-  border: 1px solid black;
+  background-color: transparent;
+  color: rgba(61, 215, 91);
+  border: 2px solid rgba(61, 215, 91);
 }

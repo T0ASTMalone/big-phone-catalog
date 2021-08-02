@@ -33,7 +33,7 @@ const Cart = ({ cart, removeFromCart, page, handleNextSection, loaded, total }) 
         </button>
       )}
 
-      <p>{cart.length > 0 ? formatter.format(total) : ""}</p>
+      <p className="price">{cart.length > 0 ? formatter.format(total) : ""}</p>
     </div>
   );
 };

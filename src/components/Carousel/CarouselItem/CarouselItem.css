@@ -11,7 +11,7 @@
 .phone-card {
   width: 95%;
   height: 70%;
-  background-color: #f6a4ed27;
+  background-color: rgba(254, 164, 116, 0.384);
   margin: auto;
   border-radius: 3px;
   overflow: hidden;
@@ -24,12 +24,18 @@
 }
 
 .phone-card-text {
+  color: rgb(114, 124, 116);
   font: bold 24px "Helvetica Neue", Helvetica, Arial, sans-serif;
   word-wrap: normal;
 }
 
+.selected>.phone-card-text {
+  color: white;
+}
+
 .selected {
-  background-color: #f6a4ed91;
+  background-color: rgba(5, 37, 61, 0.466) ;
+
 }
 
 .carousel-item-controls {

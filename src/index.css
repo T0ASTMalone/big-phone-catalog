@@ -1,21 +1,27 @@
+html {
+  height: 100%;
+}
+
 body {
+  height: 100vh;
+  color: white;
   margin: 0;
+  background: rgb(5,37,61);
+  background: linear-gradient(135deg, rgba(5,37,61,1) 0%, rgba(155,79,88,1) 59%, rgba(254,164,116,1) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-/* Colors */
-/* #1CC6FF */
-/* #97FBD1 */
-/* #F6A4EC */
 
 
 .btn {
@@ -25,24 +31,20 @@ code {
   display: inline-flex;
   align-items: center;
   height: var(--buttonHeight);
+  color: white;
   padding: 0 calc(var(--buttonHeight) / 2);
   border-radius: calc(var(--buttonHeight)/2);
-  background-color: #1cc6ff4f;
-  /* background-color: rgba(255, 255, 255, 0.678); */
+  background-color:  rgba(61, 215, 91);
   transition: var(--hoverTransition);
-  /* color: #fff; */
 }
 
 .btn:hover {
   transition: var(--hoverTransition);
-  background-color: #1cc6ff9d;
+  background-color: rgba(61, 215, 92, 0.747);
+  color: white;
 }
 
 
-/* You can use pseudo element with skew transformation : */
-
-body {
-  height: 100vh;
-  margin: 0;
-  /* background: yellow; */
+.payment-container {
+  padding-bottom: 50px;
 }
