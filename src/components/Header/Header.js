@@ -47,10 +47,10 @@ const Header = () => {
 
   return (
     <header className="container">
-      <Link className="header-link" to="/">
+      <Link className="header-link" to="/big-phone-catalog">
         <p className="header-brand">Big Phone Catalog</p>
       </Link>
-      <Link to="/checkout" className="btn header-link checkout-btn">
+      <Link to="/big-phone-catalog/checkout" className="btn header-link checkout-btn">
         {/* Causing ref error but should alternate between cart icon and cart size */}
         {/* <CSSTransition in={!alternate} timeout={2000} classNames="header-link-icon">
           {(state) => {

@@ -23,7 +23,7 @@ const Checkout = () => {
 
   const handleCheckout = () => {
     dispatch({ type: "CHECKOUT" });
-    history.push("/");
+    history.push("/big-phone-catalog");
   };
 
   useEffect(() => {

@@ -6,7 +6,7 @@ const EmptyCart = () => {
   return (
     <div className="empty-cart">
       <p>Nothing to See Here</p>
-      <Link to="/" className="btn header-link">Back to Catalog</Link>
+      <Link to="/big-phone-catalog" className="btn header-link">Back to Catalog</Link>
     </div>
   );
 };

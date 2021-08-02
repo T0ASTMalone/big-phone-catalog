@@ -15,9 +15,9 @@ function App() {
         <Header/>
         <Switch>
           {/* Catalog */}
-          <Route exact path="/" component={Catalog}/>
+          <Route exact path="/big-phone-catalog" component={Catalog}/>
           {/* Checkout */}
-          <Route path="/checkout" component={Checkout}/>
+          <Route path="/big-phone-catalog/checkout" component={Checkout}/>
         </Switch>
       </div>
 
