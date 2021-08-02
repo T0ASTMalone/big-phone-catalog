@@ -10,15 +10,16 @@ header {
 
 .header-brand {
   width: 200px;
+  font-size: 20px;
 }
 
 
 
 .header-link {
   --header-link-width: 32px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 800;
-  width: var(--header-link-width);
+  /* width: var(--header-link-width); */
   text-align: center;
   text-decoration: none;
   color: white;
@@ -29,14 +30,15 @@ header {
 }
 
 .cart-icon {
-  margin: auto;
+  /* margin: auto; */
   width: 20px;
 }
 
 .cart-size {
-  text-align: center;
-  width: var(--header-link-width);
-  position: absolute;
+  /* text-align: center; */
+  /* width: var(--header-link-width); */
+
+  /* top: -7px; */
 }
 
 .fade.hide-opacity{

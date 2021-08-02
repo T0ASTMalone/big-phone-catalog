@@ -1,12 +1,14 @@
-import React from 'react'
-import "./EmptyCart.css"
+import React from "react";
+import { Link } from "react-router-dom";
+import "./EmptyCart.css";
 
 const EmptyCart = () => {
   return (
     <div className="empty-cart">
-      Nothing to See Here
+      <p>Nothing to See Here</p>
+      <Link to="/" className="btn header-link">Back to Catalog</Link>
     </div>
-  )
-}
+  );
+};
 
-export default EmptyCart
+export default EmptyCart;

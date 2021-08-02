@@ -9,15 +9,16 @@ const Cart = ({ cart, removeFromCart, page, handleNextSection, loaded, total }) 
 
   return (
     <div className="cart">
-
-      <div className="cart-header">
-        <div className="cart-header-item">
-          <h3>Item</h3>
+      {cart.length > 0 && (
+        <div className="cart-header">
+          <div className="cart-header-item">
+            <h3>Item</h3>
+          </div>
+          <div className="cart-header-item">
+            <h3>Cost</h3>
+          </div>
         </div>
-        <div className="cart-header-item">
-          <h3>Cost</h3>
-        </div>
-      </div>
+      )}
 
       <ol className="cart-items">
         {cart.length > 0 ? (

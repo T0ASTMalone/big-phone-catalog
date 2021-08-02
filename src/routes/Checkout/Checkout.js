@@ -36,7 +36,6 @@ const Checkout = () => {
 
   useEffect(() => {
     setCartPage(cart.slice(0, 3));
-    setLoaded(false);
   }, []);
 
   const handleNextSection = (newPage) => {
