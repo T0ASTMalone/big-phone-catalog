@@ -1,12 +1,12 @@
 import React, { useContext, useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import Cart from "../../components/Cart/Cart";
+import EmptyCart from "../../components/Cart/EmptyCart/EmptyCart";
 import { ShopContext } from "../../context/BigPhoneCatalogContext";
 
 const PAGE_SIZE = 3;
 
 const Checkout = () => {
-  
   const {
     state: { cart },
     dispatch,
@@ -28,7 +28,7 @@ const Checkout = () => {
 
   useEffect(() => {
     const lastIndex = (page <= 0 ? 1 : page) * PAGE_SIZE;
-    const newCart = cart.slice(0, lastIndex)
+    const newCart = cart.slice(0, lastIndex);
 
     setLoaded(lastIndex >= cart.length);
     setCartPage(newCart);
@@ -46,7 +46,6 @@ const Checkout = () => {
     setPage(newPage);
     setCartPage([...nextPage]);
 
-
     if (to >= cart.length) {
       setLoaded(true);
     }
@@ -58,20 +57,24 @@ const Checkout = () => {
 
   return (
     <div>
-      <Cart
-        cart={cartPage}
-        handleNextSection={handleNextSection}
-        loaded={loaded}
-        page={page}
-        removeFromCart={handleRemoveFromCart}
-        total={getTotal()}
-      />
-      {cart.length > 0 && (
-        <div className="payment-containerr">
-          <button onClick={() => handleCheckout()} className="payment-btn btn">
-            Pay
-          </button>
-        </div>
+      {cart.length > 0 ? (
+        <>
+          <Cart
+            cart={cartPage}
+            handleNextSection={handleNextSection}
+            loaded={loaded}
+            page={page}
+            removeFromCart={handleRemoveFromCart}
+            total={getTotal()}
+          />
+          <div className="payment-container">
+            <button onClick={() => handleCheckout()} className="payment-btn btn">
+              Pay
+            </button>
+          </div>
+        </>
+      ) : (
+        <EmptyCart />
       )}
     </div>
   );

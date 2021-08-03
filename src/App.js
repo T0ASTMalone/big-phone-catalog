@@ -7,9 +7,7 @@ import Catalog from './routes/Catalog/Catalog';
 import Checkout from './routes/Checkout/Checkout';
 
 function App() {
-
   return (
-
       <div className="App">
         {/* Header */}
         <Header/>
