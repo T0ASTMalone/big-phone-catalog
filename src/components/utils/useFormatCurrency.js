@@ -1,6 +1,6 @@
 
 /**
- * returns a formatter for currency
+ * returns a formatter for currency of the provided language and currency type.
  * @param {*} lang 
  * @param {*} currency 
  * @returns 

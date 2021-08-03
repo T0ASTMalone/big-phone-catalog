@@ -1,7 +1,11 @@
 import React from "react";
 import useFormatCurrency from "../../utils/useFormatCurrency";
 import "./CarouselItem.css";
-
+/**
+ * Represents a phone item. Can add phone to cart if not already in cart.
+ * @param {*} param0 
+ * @returns 
+ */
 const CarouselItem = ({ item, handleAddItem, inCart }) => {
   const formatter = useFormatCurrency('en-US', 'USD')
 

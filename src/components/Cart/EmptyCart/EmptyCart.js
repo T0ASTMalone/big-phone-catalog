@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./EmptyCart.css";
 
+/**
+ * Empty cat that contains a links back to the catalog page.
+ * 
+ */
 const EmptyCart = () => {
   return (
     <div className="empty-cart">

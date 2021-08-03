@@ -3,8 +3,6 @@ import React, { useReducer } from "react";
 
 const initialState = {
   error: null,
-  isDope: true,
-  count: 0,
   cart: []
 };
 

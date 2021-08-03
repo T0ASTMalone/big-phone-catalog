@@ -2,6 +2,11 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 import Carousel from "../../components/Carousel/Carousel";
 import PhoneService from "../../services/catalog-service";
 
+/**
+ * Catalog page
+ * 
+ */
+
 const Catalog = () => {
   const [catalog, setCatalog] = useState(null);
   const [page, setPage] = useState(0);

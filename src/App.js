@@ -11,6 +11,8 @@ function App() {
       <div className="App">
         {/* Header */}
         <Header/>
+
+        {/* Handles routing in app */}
         <Switch>
           {/* Catalog */}
           <Route exact path="/big-phone-catalog" component={Catalog}/>

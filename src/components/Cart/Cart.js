@@ -3,6 +3,11 @@ import CartItem from "./CartItem/CartItem";
 import "./Cart.css";
 import useFormatCurrency from "../utils/useFormatCurrency";
 
+/**
+ * Cart Component that lists CartItems and shows total amount owed.
+ * 
+ */
+
 const Cart = ({ cart, removeFromCart, page, handleNextSection, loaded, total }) => {
   const formatter = useFormatCurrency("en-US", "USD");
 
