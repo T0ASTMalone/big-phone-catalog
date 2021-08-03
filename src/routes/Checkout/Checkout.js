@@ -3,11 +3,11 @@ import { useHistory } from "react-router-dom";
 import Cart from "../../components/Cart/Cart";
 import EmptyCart from "../../components/Cart/EmptyCart/EmptyCart";
 import { ShopContext } from "../../context/BigPhoneCatalogContext";
-
 const PAGE_SIZE = 3;
+
 /**
  * Checkout page
- * @returns 
+ * 
  */
 const Checkout = () => {
   const {
