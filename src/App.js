@@ -5,6 +5,7 @@ import React from 'react';
 import Header from './components/Header/Header';
 import Catalog from './routes/Catalog/Catalog';
 import Checkout from './routes/Checkout/Checkout';
+import { Redirect } from 'react-router-dom';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
 
         {/* Handles routing in app */}
         <Switch>
+          <Route exact path="/">
+              <Redirect to="/big-phone-catalog" />
+          </Route>
           {/* Catalog */}
           <Route exact path="/big-phone-catalog" component={Catalog}/>
           {/* Checkout */}
