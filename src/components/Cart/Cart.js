@@ -1,7 +1,7 @@
 import React from "react";
 import CartItem from "./CartItem/CartItem";
 import "./Cart.css";
-import useFormatCurrency from "../utils/useFormatCurrency";
+import useFormatCurrency from "components/utils/useFormatCurrency";
 
 /**
  * Cart Component that lists CartItems and shows total amount owed.

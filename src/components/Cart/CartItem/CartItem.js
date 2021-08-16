@@ -1,5 +1,5 @@
 import React from "react";
-import useFormatCurrency from "../../utils/useFormatCurrency";
+import useFormatCurrency from "components/utils/useFormatCurrency";
 import "./CartItem.css";
 /**
  * Represents CartItem

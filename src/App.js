@@ -2,9 +2,9 @@
 import './App.css';
 import { Switch, Route } from 'react-router';
 import React from 'react';
-import Header from './components/Header/Header';
-import Catalog from './routes/Catalog/Catalog';
-import Checkout from './routes/Checkout/Checkout';
+import Header from 'components/Header/Header';
+import Catalog from 'routes/Catalog/Catalog';
+import Checkout from 'routes/Checkout/Checkout';
 import { Redirect } from 'react-router-dom';
 
 function App() {

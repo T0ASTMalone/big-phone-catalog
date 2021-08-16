@@ -1,5 +1,5 @@
 import React from "react";
-import useFormatCurrency from "../../utils/useFormatCurrency";
+import useFormatCurrency from "components/utils/useFormatCurrency";
 import "./CarouselItem.css";
 /**
  * Represents a phone item. Can add phone to cart if not already in cart.

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import CarouselItem from "./CarouselItem/CarouselItem";
 import "./Carousel.css";
-import { ShopContext } from "../../context/BigPhoneCatalogContext";
+import { ShopContext } from "context/BigPhoneCatalogContext";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 const Carousel = ({ catalog, handleUpdatePage, page}) => {

@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import { ShopContext } from "../../context/BigPhoneCatalogContext";
+import { ShopContext } from "context/BigPhoneCatalogContext";
 import { FaShoppingCart } from "react-icons/fa";
 
 const Header = () => {
